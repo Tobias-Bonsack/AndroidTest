@@ -13,7 +13,7 @@ public class MainActivity2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
 
-        findViewById(R.id.button).setOnClickListener(view -> startActivity(new Intent(getApplicationContext(), MainActivity.class)));
+        findViewById(R.id.enterNameBtn).setOnClickListener(view -> startActivity(new Intent(getApplicationContext(), MainActivity.class)));
 
         findViewById(R.id.button2).setOnClickListener(view -> startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.google.com"))));
 

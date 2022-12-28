@@ -3,6 +3,13 @@
 
     <application>
         <activity
+            android:name=".LnGeneratedNumber"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".LnMainActivity"
             android:exported="false">
             <meta-data
