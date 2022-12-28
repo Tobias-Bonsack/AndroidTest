@@ -6,13 +6,25 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
 
+        <Button
+            android:id="@+id/intentBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="normal intent" />
+
+        <Button
+            android:id="@+id/luckyNumberBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="lucky number app" />
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
