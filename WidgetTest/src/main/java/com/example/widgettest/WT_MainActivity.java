@@ -51,5 +51,9 @@ public class WT_MainActivity extends AppCompatActivity {
             var timePickerFragment = new TimePickerFragment();
             timePickerFragment.show(getSupportFragmentManager(), "Pick Time");
         });
+
+        //Date Picker
+        Button dateBtn = findViewById(R.id.datePickerBtn);
+        dateBtn.setOnClickListener(view -> new DatePickerFragment().show(getSupportFragmentManager(), "Pick Date"));
     }
 }
