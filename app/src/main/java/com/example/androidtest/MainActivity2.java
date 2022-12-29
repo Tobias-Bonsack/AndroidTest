@@ -15,7 +15,7 @@ public class MainActivity2 extends AppCompatActivity {
 
         findViewById(R.id.enterNameBtn).setOnClickListener(view -> startActivity(new Intent(getApplicationContext(), MainActivity.class)));
 
-        findViewById(R.id.button2).setOnClickListener(view -> startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.google.com"))));
+        findViewById(R.id.datePickerBtn).setOnClickListener(view -> startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.google.com"))));
 
     }
 }
