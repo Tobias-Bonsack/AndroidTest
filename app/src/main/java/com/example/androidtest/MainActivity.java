@@ -4,8 +4,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.Switch;
 
 import com.example.luckynumbers.LnMainActivity;
+import com.example.widgettest.WT_MainActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -22,5 +27,23 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(getApplicationContext(), LnMainActivity.class))
         );
 
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.testmenu, menu);
+        MenuItem switcher = menu.findItem(R.id.app_bar_switch);
+
+        switcher.setOnMenuItemClickListener(menuItem -> {
+            switcher.setChecked(!switcher.isChecked());
+            return true;
+        });
+
+        menu.findItem(R.id.widgetsMI).setOnMenuItemClickListener(menuItem -> {
+            startActivity(new Intent(getApplicationContext(), WT_MainActivity.class));
+            return true;
+        });
+
+        return true;
     }
 }
